@@ -26,7 +26,7 @@ class ExActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     lateinit var customDialog: Dialog
     var music:MediaPlayer? = null
     var countDownTimer:CountDownTimer ? = null
-    var timerValue = 1000L
+    var timerValue = 10000L
     var restProgress = 0
     var exerciseList:ArrayList<ExerciseModel>?= null
     private var exerciseAdapter:ExerciseStatusAdapter? = null
@@ -124,7 +124,7 @@ class ExActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     private fun gotoSecondTimer() {
         binding.progressbar2.progress = restProgress
 
-        countDownTimer = object : CountDownTimer(1000,1000){
+        countDownTimer = object : CountDownTimer(30000,1000){
             override fun onTick(millisUntilFinished: Long) {
                 if(restProgress==2){
                     music!!.setVolume(1f,1f)
