@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ExActivity">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorAccent1"
+            app:titleTextColor="@color/white"
+            app:title="My New Activity"
+
+
+    />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/llrestview"
+                  android:gravity="center"
+                  android:visibility="visible"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/tool_bar">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/change_my_name"
+                  android:textSize="22sp"
+                  android:textStyle="bold"
+                  android:textAllCaps="true"
+                  android:textColor="@color/black"
+                  android:text="GET READY"/>
+
+        <FrameLayout android:layout_width="100dp"
+                     android:layout_height="100dp"
+                     android:layout_marginTop="10dp"
+                     android:background="@drawable/item_circular_color_accent_border">
+            <ProgressBar android:layout_width="100dp" android:layout_height="100dp"
+                         android:rotation="-90" android:id="@+id/progressbar"
+                         style="?android:attr/progressBarStyleHorizontal"
+                         android:layout_gravity="center"
+                         android:progress="10"
+                         android:indeterminate="false"
+                         android:background="@drawable/circular_progress_grey"
+                         android:progressDrawable="@drawable/circular_progress_bar"
+                         android:max="10"/>
+            <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                          android:gravity="center"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_circular_color_accent_background2"
+
+            >
+
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:text="10" android:textStyle="bold"
+                          android:textSize="25sp"
+                          android:gravity="center"
+                          android:id="@+id/tvtimer" android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:text="Upcomming Exercise:"
+                  android:textSize="20sp"
+        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/exerciseNameChange"
+                  android:textStyle="bold"
+                  android:textSize="22sp"
+                  android:text=" "
+                  />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/llrestviewthirtysecond"
+                  android:gravity="center"
+                  android:visibility="gone"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/tool_bar"
+                  android:layout_above="@+id/rvExerciseStatus"
+    >
+        <ImageView android:layout_width="match_parent" android:layout_height="0dp"
+                   android:scaleType="fitXY"
+                   android:layout_weight="1"
+                   android:contentDescription="String Image"
+                   android:id="@+id/ivImage"
+                   android:src="@drawable/ic_jumping_jacks_10"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/exerciseName"
+                  android:textSize="22sp"
+                  android:textStyle="bold"
+                  android:textAllCaps="true"
+                  android:textColor="@color/black"
+                  android:text="Exercise Name"/>
+
+        <FrameLayout android:layout_width="100dp"
+                     android:layout_height="100dp"
+                     android:layout_marginTop="10dp"
+                     android:background="@drawable/item_circular_color_accent_border">
+            <ProgressBar android:layout_width="100dp" android:layout_height="100dp"
+                         android:rotation="-90" android:id="@+id/progressbar2"
+                         style="?android:attr/progressBarStyleHorizontal"
+                         android:layout_gravity="center"
+                         android:progress="30"
+                         android:indeterminate="false"
+                         android:background="@drawable/circular_progress_grey"
+                         android:progressDrawable="@drawable/circular_progress_bar"
+                         android:max="30"/>
+            <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                          android:gravity="center"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_circular_color_accent_background2"
+
+            >
+
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:text="10" android:textStyle="bold"
+                          android:textSize="25sp"
+                          android:gravity="center"
+                          android:id="@+id/tvtimer2" android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+<!--        <LinearLayout-->
+<!--                android:id="@+id/exceriseNumberTabLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:gravity="center|center_horizontal"-->
+<!--                android:orientation="horizontal">-->
+<!--                <TextView-->
+<!--                        android:id="@+id/exerciseNo1"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:text="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo2"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="2"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo3"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="3"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo4"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="4"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo5"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="5"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo6"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="6"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo7"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="7"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo8"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="8"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo9"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="9"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--                <TextView android:id="@+id/exerciseNo10"-->
+<!--                          android:layout_width="30dp"-->
+<!--                          android:layout_height="30dp"-->
+<!--                          android:text="10"-->
+<!--                          android:gravity="center"-->
+<!--                          android:background="@drawable/item_circular_color_accent_background_for_bottomprogress"/>-->
+<!--            </LinearLayout>-->
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExerciseStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+    />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/thankutextview"
+                  android:gravity="center"
+
+                  android:visibility="gone"
+                  android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_below="@+id/tool_bar"
+                  android:text="7 Minute workout completed"
+                  android:textSize="40dp"
+        />
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Finish"
+                android:id="@+id/FinishButtonUnclickMe"
+                android:clickable="true"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:background="@color/colorAccent1"
+                android:onClick="goToMainActivity"
+                />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
